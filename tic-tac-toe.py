@@ -12,6 +12,7 @@ board = [
 ]
 
 # Print the original table
+# Note: board is a list, now we are printing each element of the list
 for line in board:
     print(line)
 
@@ -59,8 +60,8 @@ def input_0():
     row = row[:col_index] + "0" + row[col_index+1:]  # before + 0 + after
     board[row_index] = row
 
-    for line in board:  # New table
-        print(line)
+    for rows in board:  # New table
+        print(rows)
 
 # ------------------------------------------------------------------------------
 
@@ -162,8 +163,4 @@ for i in range(9):
     # 0 win conditions
     if win_0():
         print("Player 0 won !!")
-        break
-    # only runs if no break happens
-    else:
-        print("It's a draw!")
         break
